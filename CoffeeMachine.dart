@@ -1,5 +1,6 @@
 class CoffeeMachine {
   int _balance;
+  List<int> _cashList = [1, 2, 5, 10, 50, 100];
 
   CoffeeMachine(int balance) {
     if (balance < 0) {
@@ -16,6 +17,5 @@ class CoffeeMachine {
     }
   };
 
-  bool isCash(int cash) => cash == 1 || cash == 2 || cash == 5 || cash == 10 ||
-                           cash == 50 || cash == 100;
+  bool isCash(int cash) => this._cashList.contains(cash);
 }
